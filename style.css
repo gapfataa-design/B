@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #1b092b 0%, #0a0312 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Tarjeta central */
+.card-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(186, 104, 200, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 360px;
+  width: 90%;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  color: #f3e5f5;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(225, 190, 231, 0.6);
+}
+
+/* Pista y Corazón */
+.heart-track-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.heart-center {
+  font-size: 4.5rem;
+  filter: drop-shadow(0 0 15px rgba(233, 30, 99, 0.8));
+  animation: pulseHeart 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes pulseHeart {
+  0% { transform: scale(0.95); }
+  100% { transform: scale(1.1); }
+}
+
+/* Órbita del Carrito alrededor del corazón */
+.orbit-car {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255, 235, 59, 0.4);
+  animation: rotateCar 4s linear infinite;
+}
+
+.car {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  font-size: 1.6rem;
+  filter: drop-shadow(0 0 8px #ffeb3b);
+}
+
+@keyframes rotateCar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Frase pequeña */
+.subtitle {
+  font-size: 0.95rem;
+  color: #e1bee7;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
